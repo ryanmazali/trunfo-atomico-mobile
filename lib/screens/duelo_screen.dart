@@ -54,7 +54,7 @@ class _DueloScreenState extends State<DueloScreen> {
         } else if (atributo == 'massa') {
         return 'Número de massa';
         } else {
-        return 'Usos no dia a dia';
+        return 'Usos no álbum';
         }
     }
 
@@ -139,7 +139,7 @@ class _DueloScreenState extends State<DueloScreen> {
                 Text(
                 _revelado
                     ? 'Rodada encerrada. Compare as cartas.'
-                    : 'Toque no atributo da sua carta que você acha que vence.',
+                    : 'Toque no atributo da sua carta que você acha que vence. Vence o maior valor.',
                 style: Estilos.corpo,
                 ),
                 const SizedBox(height: 12),

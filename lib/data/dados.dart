@@ -31,7 +31,7 @@ const List<Isotopo> isotopos = [
             'O flúor-18 usado no exame de PET-CT continua no corpo por semanas.',
         afirmacaoVerdadeira: false,
         explicacao:
-            'Ele perde metade da radiação a cada 110 minutos. Em 24 horas já passaram 13 meias-vidas e resta menos de 0,02% do que foi aplicado.',
+            'Ele perde metade da radioatividade a cada 110 minutos. Em 24 horas já passaram 13 meias-vidas e resta menos de 0,02% do que foi aplicado.',
         fonteExplicacao: nndc,
     ),
     Isotopo(
@@ -53,7 +53,7 @@ const List<Isotopo> isotopos = [
         afirmacao: 'Quem faz uma cintilografia fica radioativo para sempre.',
         afirmacaoVerdadeira: false,
         explicacao:
-            'O tecnécio-99m perde metade da radiação a cada 6 horas. Em cerca de dois dias praticamente não resta nada no corpo.',
+            'O tecnécio-99m perde metade da radioatividade a cada 6 horas. Em cerca de dois dias praticamente não resta nada no corpo.',
         fonteExplicacao: nndc,
     ),
     Isotopo(
@@ -97,7 +97,7 @@ const List<Isotopo> isotopos = [
             'É possível tratar doenças da tireoide com uma cápsula radioativa, sem cirurgia.',
         afirmacaoVerdadeira: true,
         explicacao:
-            'A tireoide absorve iodo naturalmente. O iodo-131 tomado por via oral se concentra nela e age só ali, poupando o resto do corpo.',
+            'A tireoide absorve iodo naturalmente. O iodo-131 tomado por via oral se concentra nela e age principalmente ali, poupando o resto do corpo.',
         fonteExplicacao: cnen,
     ),
     Isotopo(
@@ -286,7 +286,7 @@ const List<Isotopo> isotopos = [
             'O urânio de uma usina nuclear é o mesmo, na mesma concentração, de uma bomba atômica.',
         afirmacaoVerdadeira: false,
         explicacao:
-            'O combustível de uma usina tem de 3% a 5% de urânio-235. Uma arma exige mais de 90%. São materiais muito diferentes.',
+            'O combustível de uma usina tem de 3% a 5% de urânio-235. Armas usam urânio com cerca de 90%. São materiais muito diferentes.',
         fonteExplicacao: iaea,
     ),
     Isotopo(

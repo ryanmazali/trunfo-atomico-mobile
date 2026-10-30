@@ -25,12 +25,6 @@ class _DetalheScreenState extends State<DetalheScreen> {
         });
     }
 
-    void _responderDeNovo() {
-        setState(() {
-        _resposta = null;
-        });
-    }
-
     @override
     Widget build(BuildContext context) {
         Isotopo isotopo = widget.isotopo;
@@ -63,19 +57,27 @@ class _DetalheScreenState extends State<DetalheScreen> {
                 ),
                 ),
                 const SizedBox(height: 12),
-                Row(
-                children: [
+                IntrinsicHeight(
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
                     Expanded(
-                    child: _caixaDado(
+                        child: _caixaDado(
                         'MEIA-VIDA',
                         formatarMeiaVida(isotopo.meiaVidaDias),
-                    ),
+                        'tempo para perder metade da radioatividade',
+                        ),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
-                    child: _caixaDado('NÚMERO DE MASSA', '${isotopo.numeroMassa}'),
+                        child: _caixaDado(
+                        'NÚMERO DE MASSA',
+                        '${isotopo.numeroMassa}',
+                        'prótons + nêutrons no núcleo',
+                        ),
                     ),
-                ],
+                    ],
+                ),
                 ),
                 const SizedBox(height: 8),
                 Text(
@@ -114,7 +116,7 @@ class _DetalheScreenState extends State<DetalheScreen> {
         );
     }
 
-    Widget _caixaDado(String rotulo, String valor) {
+    Widget _caixaDado(String rotulo, String valor, String legenda) {
         return Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
@@ -133,6 +135,15 @@ class _DetalheScreenState extends State<DetalheScreen> {
                 fontSize: 17,
                 fontWeight: FontWeight.w800,
                 color: Cores.tinta,
+                ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+                legenda,
+                style: const TextStyle(
+                fontSize: 12,
+                height: 1.3,
+                color: Cores.tintaSuave,
                 ),
             ),
             ],
@@ -317,15 +328,6 @@ class _DetalheScreenState extends State<DetalheScreen> {
             Text(
                 'Fonte: ${isotopo.fonteExplicacao}',
                 style: const TextStyle(fontSize: 12, color: Cores.tintaSuave),
-            ),
-            const SizedBox(height: 4),
-            TextButton(
-                onPressed: _responderDeNovo,
-                style: TextButton.styleFrom(
-                foregroundColor: Cores.tinta,
-                padding: EdgeInsets.zero,
-                ),
-                child: const Text('Responder de novo'),
             ),
             ],
         ),

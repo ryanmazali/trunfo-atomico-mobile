@@ -51,7 +51,7 @@ class InicioScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 28),
                 const Text(
-                    'O nuclear está mais perto do que você imagina.',
+                    'A tecnologia nuclear está mais perto do que você imagina.',
                     style: TextStyle(
                     fontSize: 30,
                     height: 1.15,
@@ -64,13 +64,17 @@ class InicioScreen extends StatelessWidget {
                 const Text(
                     'Cada carta é um isótopo radioativo com uso real: exame médico, '
                     'detector de fumaça, conservação de alimentos, energia. '
-                    'Colecione, duele e descubra quanto tempo cada um dura.',
+                    'Explore as cartas, desafie o computador e descubra em quanto '
+                    'tempo cada um perde metade da radioatividade.',
                     style: Estilos.corpo,
                 ),
                 const SizedBox(height: 24),
 
-                // A tese do projeto: a meia-vida vai de minutos a bilhões de anos.
-                const Text('DE MINUTOS A BILHÕES DE ANOS', style: Estilos.rotulo),
+                // A ideia central do projeto: a meia-vida vai de minutos a bilhões de anos.
+                const Text(
+                    'A MEIA-VIDA VAI DE MINUTOS A BILHÕES DE ANOS',
+                    style: Estilos.rotulo,
+                ),
                 const SizedBox(height: 10),
                 Row(
                     children: [

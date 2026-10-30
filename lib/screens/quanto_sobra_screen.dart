@@ -74,7 +74,7 @@ class _QuantoSobraScreenState extends State<QuantoSobraScreen> {
         }
         double? numero = _lerNumero(valor);
         if (numero == null) {
-        return 'Número inválido';
+        return 'Digite um número válido, como 10 ou 2,5';
         }
         if (numero < 0) {
         return 'Não pode ser negativo';
@@ -143,7 +143,9 @@ class _QuantoSobraScreenState extends State<QuantoSobraScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                 const Text(
-                'Escolha um isótopo, a quantidade e o tempo. O app calcula quanto do material ainda resta.',
+                'Escolha um isótopo, a quantidade e o tempo. O app calcula quantos '
+                'gramas do isótopo ainda restam. O resto já se transformou em outro '
+                'elemento, que não é mais esse isótopo.',
                 style: Estilos.corpo,
                 ),
                 const SizedBox(height: 16),
@@ -315,7 +317,7 @@ class _QuantoSobraScreenState extends State<QuantoSobraScreen> {
                 children: [
                 Expanded(
                     child: _numeroResultado(
-                    'DO MATERIAL',
+                    'DO ISÓTOPO',
                     formatarPercentual(simulacao.percentualRestante),
                     ),
                 ),

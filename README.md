@@ -70,4 +70,4 @@ assets/images/logo.png
 
 ## Vídeo de demonstração
 
-[Assistir no YouTube]()
+[Assistir no YouTube](https://youtu.be/wJDeZ6JjuJ8)
